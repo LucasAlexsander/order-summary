@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    /*PRIMARY*/
+    --pale-blue:hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    /*NEUTRAL*/
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Red Hat Display';
+    background-image: url('../image/pattern-background-desktop.svg');
+    background-color: var(--pale-blue);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.7s linear;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px hsl(224, 23%, 55%);
+    margin: 20px;
+}
+
+.image-area {
+    flex: 1;
+    background-image: url('../image/illustration-hero.svg');
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.summary-area {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.summary-area h2,
+.summary-area p {
+    text-align: center;
+}
+
+.summary-area h2 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.summary-area p {
+    font-size: 13px;
+    color: var(--desaturated-blue);
+}
+
+.payment-area {
+    display: flex;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    border-radius: 10px;
+    height: auto;
+    justify-content: space-between;
+    padding: 0px 15px;
+    margin: 20px 0px;
+}
+
+.payment-area .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.payment-area .text {    
+    margin-left: -40px;
+}
+
+.payment-area .text h2 {
+    font-size: 13px;
+}
+.payment-area .text p {
+    margin-top: -7px;
+}
+
+.payment-area p a {
+    color: var(--bright-blue);
+    font-weight: 900;
+    font-size: 13px;
+}
+.payment-area a:hover {
+    text-decoration: none;
+    color: rgb(109, 39, 238);
+}
+
+
+.button {
+    width: auto;
+    height: auto;
+    background-color: var(--bright-blue);
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px 0px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 10px var(--pale-blue);
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(109, 39, 238);
+}
+.cancel {
+    margin-top: 8px;
+    text-align: center;
+}
+.cancel p {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 12px;
+    cursor: pointer;
+}
+.cancel p:hover {
+    color: black;
+}
+
+
+@media (max-width: 375px) {
+    body {
+        background-image: url('../image/pattern-background-mobile.svg');
+        background-position: top;
+    }
+}
